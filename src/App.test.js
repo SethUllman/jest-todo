@@ -37,5 +37,9 @@ describe("<Account />", () => {
     const value = wrapper.find("p").text();
     expect(value).toEqual("emeraldhart@outlook.com");
   });
-  
+});
+
+it("renders correctly", () => {
+  const tree = shallow(<App />);
+  expect(toJson(tree)).toMatchSnapshot();
 })
